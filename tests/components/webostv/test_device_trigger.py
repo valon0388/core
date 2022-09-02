@@ -128,8 +128,7 @@ async def test_get_triggers_for_invalid_device_id(hass, caplog):
     await hass.async_block_till_done()
 
     assert (
-        "Invalid config for [automation]: Device invalid_device_id is not a valid webostv device"
-        in caplog.text
+        "Invalid config for [automation]: Invalid trigger configuration" in caplog.text
     )
 
 
@@ -173,7 +172,3 @@ async def test_failure_scenarios(hass, client):
     # Test that device id from non webostv domain raises exception
     with pytest.raises(InvalidDeviceAutomationConfig):
         await device_trigger.async_validate_trigger_config(hass, config)
-
-    # Test no exception if device is not loaded
-    await hass.config_entries.async_unload(entry.entry_id)
-    assert await device_trigger.async_validate_trigger_config(hass, config) == config
