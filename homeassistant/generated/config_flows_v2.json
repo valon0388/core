@@ -332,9 +332,6 @@
     "flume": {
       "name": "Flume"
     },
-    "flunearyou": {
-      "name": "Flu Near You"
-    },
     "flux_led": {
       "name": "Magic Home"
     },
@@ -509,6 +506,9 @@
     "iaqualink": {
       "name": "Jandy iAqualink"
     },
+    "ibeacon": {
+      "name": "iBeacon Tracker"
+    },
     "icloud": {
       "name": "Apple iCloud"
     },
@@ -608,6 +608,9 @@
     },
     "lg_soundbar": {
       "name": "LG Soundbars"
+    },
+    "lidarr": {
+      "name": "Lidarr"
     },
     "life360": {
       "name": "Life360"
